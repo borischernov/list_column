@@ -11,7 +11,7 @@ module ActiveScaffold
     module ListColumnHelpers
       def active_scaffold_column_list_column(record, column)
         value = record.send("#{column.name}_label")
-        formatted_value = clean_column_value(as_(hash[value]))
+        formatted_value = clean_column_value(as_(value))
         "<div style='text-align:left;'>#{formatted_value}</div>".html_safe
       end
     end
